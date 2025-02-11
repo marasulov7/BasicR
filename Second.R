@@ -107,11 +107,11 @@ head(diamonds)
 
 typeof(diamonds)
 
-hist(diamonds$price)
+hist(diamonds$depth)
 
-hist(diamonds$price, breaks=150, col="#00ff00") # 150 колонок
+hist(diamonds$depth, breaks=100, col="#00ff00", main = "diamonds depth") # 100 разрешение колонок
 
-# из цветов сформируем таблицу
-colors <- table(diamonds$color)
-colors
-barplot(colors, col = "#cc0000")
+# сформируем таблицу
+cutd <- table(diamonds$cut)
+cutd
+barplot(cutd, col = "#cc0877", main = "Cut of diamonds")
